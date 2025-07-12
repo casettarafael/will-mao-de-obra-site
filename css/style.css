@@ -245,7 +245,7 @@ nav ul li a:hover {
 /* Seção Hero (Banner Principal) - MODIFICADO */
 .hero-section {
     position: relative;
-    background: url('../images/logowill1.jpg') no-repeat center center/cover;
+    background: url('../images/logooficialwil.jpg') no-repeat center center/cover;
     color: var(--white);
     display: flex;
     flex-direction: column;
