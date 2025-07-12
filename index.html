@@ -13,7 +13,9 @@
     
     <link rel="stylesheet" href="css/style.css">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="icon" href="images/logo-will-pequeno.png" type="image/png"> 
     
@@ -25,26 +27,20 @@
 </head>
 <body>
     <header>
-        <div class="header-main-content container">
-            <div class="header-logo">
-                <img src="images/logo-will.png" alt="Logotipo Will Mão de Obra Especializada" class="logo-img">
-                <span class="visually-hidden">Will Mão de Obra Especializada</span>
-            </div>
-            <div class="header-text-content">
-                <h1>Will Mão de Obra Especializada</h1>
-                <p class="site-slogan">Sua Carga, Descarga e Montagem Com Profissionais!</p>
-            </div>
+      
+            
             <nav>
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#vantagens">Vantagens</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    
+                    <li><a href="#galeria">Galeria</a></li> 
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_WHATSAPP&text=Olá, Will! Preciso de ajuda com carga/descarga e montagem. Poderia me enviar um orçamento?" class="btn-header-whatsapp" target="_blank">
+                            Chamar no WhatsApp <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-            <a href="https://api.whatsapp.com/send?phone=5511970864756&text=Olá, Will! Preciso de ajuda com carga/descarga e montagem. Poderia me enviar um orçamento?" class="btn-header-whatsapp" target="_blank">
-                Chamar no WhatsApp
-            </a>
         </div>
     </header>
 
@@ -54,8 +50,8 @@
                 <h2 class="animate-on-load">Mão de Obra Qualificada para Seus Fretes e Mudanças!</h2>
                 <p class="animate-on-load">Conte com nossa equipe especializada em carga, descarga e montagem de móveis. Agilidade, segurança e cuidado para sua tranquilidade.</p>
                 <div class="hero-buttons animate-on-load">
-                    <a href="https://api.whatsapp.com/send?phone=5511970864756&text=Olá, Will! Gostaria de um orçamento para mão de obra de frete/mudança." class="btn hero-whatsapp-btn" target="_blank">
-                        Solicite Seu Orçamento Rápido
+                    <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_WHATSAPP&text=Olá, Will! Gostaria de um orçamento para mão de obra de frete/mudança." class="btn hero-whatsapp-btn" target="_blank">
+                        Solicite Seu Orçamento Rápido <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
@@ -64,95 +60,132 @@
         <section id="servicos" class="services-section">
             <div class="container">
                 <h2 class="animate-on-scroll">O Que a Will Mão de Obra Faz por Você?</h2>
-                <div class="services-grid">
-                    <div class="service-item animate-on-scroll">
-                        <img src="images/icon-carga-descarga.png" alt="Ícone de Carga e Descarga" class="service-icon" loading="lazy">
-                        <h3>Carga e Descarga Profissional</h3>
-                        <p>Manuseio seguro e eficiente de seus bens, otimizando o tempo do seu frete e protegendo seus pertences.</p>
-                    </div>
-                    <div class="service-item animate-on-scroll">
-                        <img src="images/icon-montagem.png" alt="Ícone de Montagem de Móveis" class="service-icon" loading="lazy">
-                        <h3>Montagem e Desmontagem de Móveis</h3>
-                        <p>Equipe especializada em móveis residenciais e comerciais, garantindo a integridade e montagem correta após o transporte.</p>
-                    </div>
-                    <div class="service-item animate-on-scroll">
-                        <img src="images/icon-embalagem.png" alt="Ícone de Embalagem" class="service-icon" loading="lazy">
-                        <h3>Auxílio em Organização e Embalagem</h3>
-                        <p>Oferecemos suporte na organização e embalagem segura dos seus itens, garantindo que tudo chegue intacto ao destino.</p>
-                    </div>
-                    <div class="service-item animate-on-scroll">
-                        <img src="images/icon-remanejamento.png" alt="Ícone de Remanejamento" class="service-icon" loading="lazy">
-                        <h3>Remanejamento Interno</h3>
-                        <p>Precisa mover ou reorganizar móveis e objetos dentro do mesmo local? Nossa equipe está pronta para ajudar com agilidade e cuidado.</p>
-                    </div>
+                <div class="swiper myServicesSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="service-item animate-on-scroll">
+                                
+                                <h3>Carga e Descarga Profissional</h3>
+                                <p>Manuseio seguro e eficiente de seus bens, otimizando o tempo do seu frete.</p> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item animate-on-scroll">
+                                
+                                <h3>Montagem e Desmontagem de Móveis</h3>
+                                <p>Montagem e desmontagem de móveis residenciais e comerciais com integridade e cuidado.</p> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item animate-on-scroll">
+                                
+                                <h3>Auxílio em Organização e Embalagem</h3>
+                                <p>Suporte na organização e embalagem segura dos seus itens, garantindo que tudo chegue intacto.</p> 
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="service-item animate-on-scroll">
+                                
+                                <h3>Remanejamento Interno</h3>
+                                <p>Precisa mover ou reorganizar móveis e objetos dentro do mesmo local? Nossa equipe está pronta para ajudar com agilidade e cuidado.</p> 
+                            </div>
+                        </div>
+                        </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-            </div>
+                </div>
+        </section>
+
+        <section id="galeria" class="galeria-section">
+            <div class="container">
+                <h2 class="animate-on-scroll">Nossos Serviços Realizados</h2>
+                <p class="animate-on-scroll">Confira alguns dos trabalhos que realizamos com excelência e dedicação.</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide galeria-item animate-on-scroll">
+                            <img src="images/foto_servico_galeria_1.jpg" alt="Serviço Realizado de Mudança" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h4>Mudança Residencial</h4>
+                                <p>Transporte e montagem completos.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide galeria-item animate-on-scroll">
+                            <img src="images/mudancaresidencial.jpg" alt="Serviço de Carga e Descarga Comercial" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h4>Carga/Descarga Comercial</h4>
+                                <p>Agilidade e segurança para empresas.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide galeria-item animate-on-scroll">
+                            <img src="images/carga-e-descarga.jpg" alt="Serviço de Montagem de Armário" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h4>Montagem de Móveis</h4>
+                                <p>Qualidade e precisão na instalação.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide galeria-item animate-on-scroll">
+                            <img src="images/montagem.jpg" alt="Serviço de Remanejamento Interno" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h4>Remanejamento Interno</h4>
+                                <p>Organização do seu espaço com eficiência.</p>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                </div>
         </section>
 
         <section id="vantagens" class="advantages-section">
             <div class="container">
                 <h2 class="animate-on-scroll">Por Que Escolher a Will Mão de Obra?</h2>
-                <div class="advantages-grid">
-                    <div class="advantage-item animate-on-scroll">
-                        <img src="images/icon-treinamento.png" alt="Ícone de Treinamento" class="advantage-icon" loading="lazy">
-                        <h3>Equipe Treinada e Uniformizada</h3>
-                        <p>Profissionais experientes, identificados e focados na excelência do serviço e no respeito aos seus bens.</p>
-                    </div>
-                    <div class="advantage-item animate-on-scroll">
-                        <img src="images/icon-agilidade.png" alt="Ícone de Agilidade" class="advantage-icon" loading="lazy">
-                        <h3>Agilidade e Eficiência</h3>
-                        <p>Otimizamos cada etapa da carga, descarga e montagem para que sua mudança seja concluída no menor tempo possível.</p>
-                    </div>
-                    <div class="advantage-item animate-on-scroll">
-                        <img src="images/icon-seguranca.png" alt="Ícone de Segurança" class="advantage-icon" loading="lazy">
-                        <h3>Segurança Prioritária</h3>
-                        <p>Cuidado máximo no manuseio e transporte, garantindo a integridade de todos os seus pertences.</p>
-                    </div>
-                    <div class="advantage-item animate-on-scroll">
-                        <img src="images/icon-disponibilidade.png" alt="Ícone de Disponibilidade 24h" class="advantage-icon" loading="lazy">
-                        <h3>Atendimento Flexível e 24h</h3>
-                        <p>Disponibilidade contínua para atender suas necessidades de agendamento, inclusive para emergências.</p>
-                    </div>
-                    <div class="advantage-item animate-on-scroll">
-                        <img src="images/icon-transparencia.png" alt="Ícone de Transparência" class="advantage-icon" loading="lazy">
-                        <h3>Orçamento Transparente</h3>
-                        <p>Valores claros e sem surpresas. Nosso compromisso é com a honestidade e a sua satisfação.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="depoimentos" class="testimonials-section">
-            <div class="container">
-                <h2 class="animate-on-scroll">Quem Já Contratou Aprova!</h2>
-                <div class="swiper mySwiperTestimonials">
+                <div class="swiper myAdvantagesSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide testimonial-card">
-                            <p>"A equipe Will foi essencial na minha mudança! Muito rápidos, cuidadosos e montaram meus móveis com perfeição. Recomendo!"</p>
-                            <h4>Maria Silva</h4>
-                            <span>São Paulo - SP</span>
+                        <div class="swiper-slide">
+                            <div class="advantage-item animate-on-scroll">
+                               
+                                <h3>Equipe Treinada e Uniformizada</h3>
+                                <p>Profissionais experientes, identificados e focados na excelência do serviço.</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide testimonial-card">
-                            <p>"Precisava de ajuda urgente para descarregar um caminhão. O atendimento foi 24h e os rapazes foram super ágeis e educados. Serviço nota 10!"</p>
-                            <h4>João Santos</h4>
-                            <span>Santo André - SP</span>
+                        <div class="swiper-slide">
+                            <div class="advantage-item animate-on-scroll">
+                               
+                                <h3>Agilidade e Eficiência</h3>
+                                <p>Otimizamos cada etapa para que sua mudança seja concluída no menor tempo.</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide testimonial-card">
-                            <p>"Contratei para montar meus guarda-roupas novos e fiquei impressionado com a expertise. Tudo impecável e no prazo. Voltarei a chamar!"</p>
-                            <h4>Ana Costa</h4>
-                            <span>São Bernardo do Campo - SP</span>
+                        <div class="swiper-slide">
+                            <div class="advantage-item animate-on-scroll">
+                                
+                                <h3>Segurança Prioritária</h3>
+                                <p>Cuidado máximo no manuseio e transporte, garantindo a integridade de seus pertences.</p>
+                            </div>
                         </div>
-                        <div class="swiper-slide testimonial-card">
-                            <p>"Extremamente profissionais e cuidadosos com meus objetos de valor. A melhor equipe que já contratei para uma mudança."</p>
-                            <h4>Pedro Almeida</h4>
-                            <span>Guarujá - SP</span>
+                        <div class="swiper-slide">
+                            <div class="advantage-item animate-on-scroll">
+                               
+                                <h3>Atendimento Flexível e 24h</h3>
+                                <p>Disponibilidade contínua para agendamentos, inclusive emergências.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
+                        <div class="swiper-slide">
+                            <div class="advantage-item animate-on-scroll">
+                               
+                                <h3>Orçamento Transparente</h3>
+                                <p>Valores claros e sem surpresas. Nosso compromisso é com a honestidade.</p>
+                            </div>
+                        </div>
+                        </div>
                     <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-            </div>
+                </div>
         </section>
 
         <section id="contato" class="contact-section">
@@ -160,14 +193,12 @@
                 <h2 class="animate-on-scroll">Fale Conosco e Solicite Seu Orçamento!</h2>
                 <p class="contact-intro animate-on-scroll">Estamos prontos para atender suas necessidades de mão de obra para fretes e mudanças. Entre em contato e peça um orçamento rápido e personalizado!</p>
                 
-                <a href="https://api.whatsapp.com/send?phone=5511970864756&text=Olá, Will! Gostaria de solicitar um orçamento para mão de obra especializada." class="btn contact-whatsapp-btn animate-on-scroll" target="_blank">
-                    <img src="images/icon-whatsapp-white.png" alt="Ícone WhatsApp" class="icon"> Orçamento Rápido via WhatsApp
+                <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_WHATSAPP&text=Olá, Will! Gostaria de solicitar um orçamento para mão de obra especializada." class="btn contact-whatsapp-btn animate-on-scroll" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Orçamento Rápido via WhatsApp
                 </a>
 
                 <div class="contact-info animate-on-scroll">
-                    <p><strong>Telefone:</strong> (11) 97086-4756</p>
-                    <p><strong>E-mail:</strong> contato@willmaodeobra.com.br</p>
-                    <p><strong>Atendimento:</strong> 24 Horas para sua comodidade</p>
+                    <p><strong>Telefone:</strong> <a href="tel:SEU_TELEFONE">(11) 97086-4756</a></p> <p><strong>E-mail:</strong> <a href="mailto:SEU_EMAIL">contato@willmaodeobra.com.br</a></p> <p><strong>Atendimento:</strong> 24 Horas para sua comodidade</p>
                     <p><strong>Área de Atuação:</strong> São Paulo (Capital e Interior), Baixada Santista, ABC Paulista e todo o Brasil (consultar)</p>
                 </div>
             </div>
@@ -180,18 +211,18 @@
             <div class="social-links">
                 <a href="#" target="_blank">Facebook</a>
                 <a href="#" target="_blank">Instagram</a>
-                </div>
+            </div>
         </div>
     </footer>
 
-    <a id="floating-whatsapp-btn" href="https://api.whatsapp.com/send?phone=5511970864756&text=Olá, Will! Preciso de um orçamento para mão de obra." class="floating-whatsapp-btn" target="_blank">
-        <img src="images/zzp.png" alt="WhatsApp Flutuante" class="whatsapp-icon-float" loading="lazy">
+    <a id="floating-whatsapp-btn" href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_WHATSAPP&text=Olá, Will! Preciso de um orçamento para mão de obra." class="floating-whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // Inicialização do Swiper para Depoimentos
+        // Inicialização do Swiper para Depoimentos (Se você usar a seção de depoimentos)
         var swiperTestimonials = new Swiper(".mySwiperTestimonials", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -218,11 +249,113 @@
             },
         });
 
+        // Inicialização do Swiper para a Galeria
+        var galeriaSwiper = new Swiper(".galeria-section .mySwiper", { 
+            slidesPerView: 'auto', 
+            spaceBetween: 15,      
+            loop: true,            
+            centeredSlides: true,  
+            autoplay: {
+                delay: 4000,       
+                disableOnInteraction: false, 
+            },
+            pagination: {
+                el: '.galeria-section .swiper-pagination', 
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.galeria-section .swiper-button-next', 
+                prevEl: '.galeria-section .swiper-button-prev', 
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4, 
+                    spaceBetween: 40,
+                },
+            }
+        });
+
+        // Inicialização do Swiper para a seção de Serviços
+        var servicesSwiper = new Swiper(".myServicesSwiper", {
+            slidesPerView: 1, // Começa com 1 slide por vez no mobile
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000, // Ajuste o delay do autoplay se quiser
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.services-section .swiper-pagination', // Seleciona a paginação dentro da seção de serviços
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.services-section .swiper-button-next', // Seleciona os botões de navegação da seção de serviços
+                prevEl: '.services-section .swiper-button-prev',
+            },
+            breakpoints: {
+                // Configurações para diferentes tamanhos de tela
+                640: {
+                    slidesPerView: 1, // 1 slide em telas pequenas de tablet
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2, // 2 slides em tablets maiores
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3, // 3 slides em desktops
+                    spaceBetween: 40,
+                },
+            }
+        });
+
+        // NOVO: Inicialização do Swiper para a seção de Vantagens
+        var advantagesSwiper = new Swiper(".myAdvantagesSwiper", {
+            slidesPerView: 1, // Começa com 1 slide por vez no mobile
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000, // Ajuste o delay do autoplay se quiser
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.advantages-section .swiper-pagination', // Seleciona a paginação dentro da seção de vantagens
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.advantages-section .swiper-button-next', // Seleciona os botões de navegação da seção de vantagens
+                prevEl: '.advantages-section .swiper-button-prev',
+            },
+            breakpoints: {
+                // Configurações para diferentes tamanhos de tela
+                640: {
+                    slidesPerView: 1, // 1 slide em telas pequenas de tablet
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2, // 2 slides em tablets maiores
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3, // 3 slides em desktops
+                    spaceBetween: 40,
+                },
+            }
+        });
+
+
         // Animação de entrada ao carregar a página (para Hero Section)
         document.addEventListener('DOMContentLoaded', () => {
             const heroAnimatedElements = document.querySelectorAll('.hero-section .animate-on-load');
             heroAnimatedElements.forEach((el, index) => {
-                // Remove a propriedade transition para evitar animação no estado inicial antes do JS
                 el.style.transition = 'none'; 
                 el.style.opacity = '0'; 
                 el.style.transform = 'translateY(20px)';
@@ -231,7 +364,7 @@
                     el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
                     el.style.opacity = '1';
                     el.style.transform = 'translateY(0)';
-                }, 300 + (index * 300)); // Atraso escalonado para cada elemento
+                }, 300 + (index * 300)); 
             });
 
             // Adiciona o ano atual no rodapé
@@ -241,22 +374,22 @@
         // Animação de elementos ao rolar (para outras seções)
         const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
         const observerOptions = {
-            root: null, // viewport
+            root: null, 
             rootMargin: '0px',
-            threshold: 0.1 // 10% do elemento visível
+            threshold: 0.1 
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '0'; // Garante que começa invisível
-                    entry.target.style.transform = 'translateY(20px)'; // Começa ligeiramente abaixo
+                    entry.target.style.opacity = '0'; 
+                    entry.target.style.transform = 'translateY(20px)'; 
                     setTimeout(() => {
                         entry.target.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, 100); // Pequeno delay para a animação
-                    observer.unobserve(entry.target); // Para de observar após animar
+                    }, 100); 
+                    observer.unobserve(entry.target); 
                 }
             });
         }, observerOptions);

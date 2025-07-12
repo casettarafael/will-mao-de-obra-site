@@ -1,28 +1,28 @@
 /* Variáveis CSS para um tema moderno e profissional (Will Mão de Obra) */
 :root {
-    --primary-color: #34495e; /* Azul/cinza escuro (Antracite) - Profissional */
-    --secondary-color: #2c3e50; /* Tom mais escuro do primário */
-    --accent-color: #e67e22; /* Laranja vibrante - Energia, destaque */
-    --whatsapp-green: #25D366; /* Verde WhatsApp */
+    --primary-color: #1a2a3a; /* Azul Escuro Profundo (quase preto) */
+    --secondary-color: #22374e; /* Tom de azul escuro ligeiramente mais claro da primária */
+    --accent-color: #00e676; /* VERDE ESMERALDA VIBRANTE (chamativo) */
+    --whatsapp-green: #25D366; /* Verde WhatsApp (mantido para reconhecimento) */
 
-    --text-dark: #343a40; /* Cinza escuro para títulos em fundos claros */
-    --text-light: #6c757d; /* Cinza médio para o corpo do texto em fundos claros */
-    --text-on-dark: #ecf0f1; /* Cinza claro para texto em fundos escuros */
+    --text-dark: #0f0f0f; /* Praticamente preto, para títulos em elementos mais claros, se houver */
+    --text-light: #cccccc; /* Cinza claro para o corpo do texto (legível em fundos escuros) */
+    --text-on-dark: #ffffff; /* Branco puro para texto em fundos muito escuros */
 
-    --bg-light: #f8f9fa; /* Fundo muito claro */
-    --bg-medium: #ecf0f1; /* Fundo levemente mais escuro */
-    --bg-dark: #212529; /* Fundo escuro para cabeçalho/rodapé */
+    --bg-light: #1c2530; /* Novo fundo "claro" - um cinza muito escuro */
+    --bg-medium: #25303f; /* Novo fundo "médio" - um cinza um pouco mais claro que o bg-light */
+    --bg-dark: #0d131b; /* Novo fundo "escuro" - o tom mais profundo */
     --white: #ffffff; /* Branco puro */
-    --border-light: #dee2e6;
+    --border-light: #4a5c70; /* Borda em tom mais escuro e suave */
 
     --transition-speed: 0.3s ease-in-out;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-medium: rgba(0, 0, 0, 0.15);
-    --shadow-strong: rgba(0, 0, 0, 0.25);
+    --shadow-light: rgba(0, 0, 0, 0.2); /* Sombras mais visíveis em fundos escuros */
+    --shadow-medium: rgba(0, 0, 0, 0.4);
+    --shadow-strong: rgba(0, 0, 0, 0.6);
 
     --border-radius-sm: 4px;
     --border-radius-md: 8px;
-    --border-radius-lg: 12px; /* Aumentado para um visual mais suave e moderno */
+    --border-radius-lg: 12px;
 }
 
 /* Estilos Gerais e Resets */
@@ -35,16 +35,16 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.7;
-    color: var(--text-light);
-    background-color: var(--bg-light);
+    color: var(--text-light); /* Texto padrão agora é claro para o fundo escuro */
+    background-color: var(--bg-light); /* Fundo padrão é escuro */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Evita barras de rolagem horizontais */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--text-dark);
+    color: var(--text-on-dark); /* Títulos em branco/claro para destaque */
     line-height: 1.2;
     margin-bottom: 0.8em;
     font-weight: 700;
@@ -52,34 +52,31 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--accent-color); /* Links padrão agora usam a cor chamativa */
     transition: all var(--transition-speed);
 }
 
 a:hover {
-    color: var(--accent-color); /* Hover para a cor de destaque */
+    color: var(--white); /* Brilho branco no hover de links */
     text-decoration: none;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem; /* Padding lateral padrão */
+    padding: 0 1.5rem;
 }
-
-/* Animações genéricas (definidas no HTML com classes .animate-on-load e .animate-on-scroll) */
-/* (Os keyframes já estão no seu CSS e são mantidos) */
 
 /* --- Cabeçalho Principal (Header) --- */
 header {
-    background: var(--white);
-    color: var(--text-dark); 
+    background: var(--bg-dark); /* Cabeçalho bem escuro */
+    color: var(--text-on-dark); 
     padding: 1rem 0;
     box-shadow: 0 4px 15px var(--shadow-medium);
     position: static; 
     top: 0;
     z-index: 1000;
-    text-align: center; /* Centraliza o conteúdo principal do header */
+    text-align: center; 
 }
 
 .header-main-content {
@@ -87,18 +84,18 @@ header {
     flex-direction: column; 
     align-items: center; 
     text-align: center; 
-    gap: 10px; /* Reduz o gap entre os elementos do cabeçalho */
+    gap: 10px; 
     justify-content: center; 
 }
 
 .header-logo {
-    margin-bottom: 0; /* Removido margem inferior, controlada pelo gap */
+    margin-bottom: 0; 
 }
 
-.logo-img { /* Estilo para a imagem do logo diretamente */
-    width: 200px; /* Tamanho do logo no mobile */
+.logo-img { 
+    width: 200px; 
     height: auto;
-    margin-bottom: 10px; /* Espaço abaixo do logo */
+    margin-bottom: 10px; 
 }
 
 .visually-hidden {
@@ -122,19 +119,19 @@ header {
 
 header h1 {
     font-size: 1.8em; 
-    margin: 0; /* Margem inferior controlada pelo slogan */
-    color: var(--primary-color); /* Usando primary-color para o título principal */
-    font-weight: 800; /* Mais impacto */
+    margin: 0; 
+    color: var(--text-on-dark); /* Título do cabeçalho também branco */
+    font-weight: 800; 
     line-height: 1.2;
 }
 
-.site-slogan { /* Classe para o slogan abaixo do H1 */
+.site-slogan { 
     font-size: 1em; 
-    font-weight: 600; /* Um pouco mais negrito */
-    color: var(--text-light); /* Cor do texto padrão */
-    margin: 5px 0 15px 0; /* Espaço abaixo do slogan, antes da nav */
+    font-weight: 600; 
+    color: var(--text-light); /* Slogan em cinza claro */
+    margin: 5px 0 15px 0; 
     line-height: 1.4;
-    max-width: 80%; /* Para quebrar a linha em telas menores */
+    max-width: 80%; 
     padding: 0 1rem;
 }
 
@@ -142,18 +139,18 @@ nav {
     width: 100%; 
     display: flex;
     justify-content: center; 
-    margin-top: 15px; /* Espaço entre o slogan e a navegação */
-    margin-bottom: 15px; /* Espaço entre a navegação e o botão */
+    margin-top: 15px; 
+    margin-bottom: 15px; 
 }
 
 nav ul {
     list-style: none; 
-    margin: 0; 
     padding: 0;
-    display: flex; /* Flexbox para alinhar horizontalmente */
-    flex-wrap: wrap; /* Permite quebrar linha em mobile */
-    gap: 1.2rem; /* Mais espaço entre os itens do menu */
-    justify-content: center; /* Centraliza os itens do menu */
+    margin: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1.2rem; 
+    justify-content: center; 
     align-items: center;
 }
 
@@ -163,37 +160,33 @@ nav ul li {
     text-align: center;
 }
 
+/* --- ESTILOS DE BOTÃO NOS LINKS DE NAVEGAÇÃO (AJUSTADO PARA TEMA ESCURO) --- */
 nav ul li a {
-    color: var(--text-dark);
+    color: var(--text-on-dark); /* Texto branco no botão */
+    background-color: var(--secondary-color); /* Fundo do botão com a cor secundária (azul escuro) */
     font-weight: 600;
     font-size: 0.9em;
-    padding: 8px 12px;
-    transition: color var(--transition-speed), background-color var(--transition-speed);
-    display: block; /* Garante que o link ocupe todo o espaço do li */
-    border-radius: var(--border-radius-sm); /* Bordas arredondadas nos links da nav */
+    padding: 0.5rem 1rem; 
+    transition: all var(--transition-speed);
+    display: inline-block; 
+    border-radius: var(--border-radius-md); 
+    box-shadow: 0 2px 5px var(--shadow-light); 
+    text-decoration: none; 
 }
 
 nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--accent-color); /* Usando cor de destaque para o hover */
-    transition: width var(--transition-speed);
-}
-nav ul li a:hover::after {
-    width: 100%;
+    content: none; 
 }
 
 nav ul li a:hover {
-    color: var(--accent-color); /* Cor de destaque no hover */
-    background-color: rgba(0, 0, 0, 0.05); 
+    color: var(--bg-dark); /* Texto escuro no hover para contraste com a cor chamativa */
+    background-color: var(--accent-color); /* Cor de destaque no hover */
+    box-shadow: 0 4px 10px var(--shadow-medium); 
+    transform: translateY(-2px); 
 }
+/* --- FIM DAS ALTERAÇÕES DE LINKS DE NAVEGAÇÃO --- */
 
-.btn-header-whatsapp { /* Novo botão de WhatsApp no cabeçalho */
+.btn-header-whatsapp { 
     background-color: var(--whatsapp-green);
     color: var(--white);
     padding: 0.7rem 1.4rem;
@@ -213,10 +206,10 @@ nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* Botões Gerais (base) */
+/* Botões Gerais (base) - Ajustado para tema escuro */
 .btn {
-    background-color: var(--primary-color);
-    color: var(--text-on-dark); /* Texto mais claro para fundos escuros */
+    background-color: var(--accent-color); /* Botões de ação com a cor chamativa */
+    color: var(--bg-dark); /* Texto escuro no botão chamativo */
     padding: 0.9rem 2rem;
     border-radius: var(--border-radius-lg);
     font-weight: 700;
@@ -233,7 +226,8 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background-color: var(--accent-color); /* Hover para a cor de destaque */
+    background-color: var(--primary-color); /* Volta para a cor primária no hover */
+    color: var(--text-on-dark); /* Texto claro no hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px var(--shadow-strong);
 }
@@ -242,8 +236,8 @@ nav ul li a:hover {
 .icon {
     display: inline-block;
     vertical-align: middle;
-    fill: currentColor; /* Permite que a cor do texto mude a cor do SVG */
-    width: 1em; /* Tamanho proporcional à fonte */
+    fill: currentColor; 
+    width: 1em; 
     height: 1em;
     margin-right: 0.5rem;
 }
@@ -251,8 +245,7 @@ nav ul li a:hover {
 /* Seção Hero (Banner Principal) - MODIFICADO */
 .hero-section {
     position: relative;
-    /* Substitua 'path/to/sua-imagem-hero.jpg' pela sua imagem de fundo real */
-    background: url('../images/fundo-hero-will.jpg') no-repeat center center/cover;
+    background: url('../images/logowill1.jpg') no-repeat center center/cover;
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -260,8 +253,8 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    padding: 6rem 1.5rem; /* Mais padding para um visual expansivo */
-    min-height: 600px; /* Altura mínima para impacto visual */
+    padding: 6rem 1.5rem; 
+    min-height: 600px; 
 }
 
 .hero-section::before {
@@ -271,7 +264,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Overlay mais escuro para garantir legibilidade */
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay um pouco mais escuro para garantir legibilidade no fundo escuro */
     z-index: 1;
 }
 
@@ -287,21 +280,21 @@ nav ul li a:hover {
 }
 
 .hero-section h2 {
-    font-size: clamp(2.8em, 6vw, 4.8em); /* Título maior e mais impactante */
+    font-size: clamp(2.8em, 6vw, 4.8em); 
     margin-bottom: 0.8rem;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.9); /* Sombra mais forte */
-    font-weight: 800; /* Ultra-negrito */
-    color: var(--white);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9); 
+    font-weight: 800; 
+    color: var(--white); /* Título branco no Hero */
     text-align: center;
 }
 
 .hero-section p {
-    font-size: clamp(1.2em, 2.5vw, 1.6em); /* Parágrafo maior */
+    font-size: clamp(1.2em, 2.5vw, 1.6em); 
     line-height: 1.7;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     max-width: 750px;
-    margin: 0 auto 2.5rem auto; /* Mais espaçamento abaixo */
-    color: var(--text-on-dark); /* Cor de texto em fundo escuro */
+    margin: 0 auto 2.5rem auto; 
+    color: var(--text-on-dark); /* Texto em cinza claro/branco */
     text-align: center;
 }
 
@@ -316,91 +309,95 @@ nav ul li a:hover {
     width: 100%;
 }
 
-.hero-whatsapp-btn { /* Botão específico da Hero */
+.hero-whatsapp-btn { 
     background-color: var(--whatsapp-green);
     color: var(--white);
-    font-size: 1.2em;
     padding: 1rem 2.5rem;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+    font-size: 1.2em;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .hero-whatsapp-btn:hover {
     background-color: #1DA851;
-    transform: translateY(-4px); /* Animação mais pronunciada */
+    transform: translateY(-4px); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* --- Seção de Serviços --- */
+/* --- Seção de Serviços, Vantagens, Depoimentos, Contato --- */
 .services-section, .advantages-section, .testimonials-section, .contact-section {
-    padding: 5rem 0; /* Padding uniforme para todas as seções */
+    padding: 5rem 0; 
     text-align: center;
-    background-color: var(--bg-light); /* Padrão para seções claras */
+    background-color: var(--bg-light); /* Fundo escuro padrão das seções */
 }
 
 /* Títulos de Seção Genéricos */
 h2 {
     font-size: clamp(2.2em, 4.5vw, 3.5em);
-    color: var(--primary-color); /* Títulos com a cor primária */
+    color: var(--text-on-dark); /* Títulos das seções em branco/claro */
     margin-bottom: 1.5rem;
     position: relative;
-    font-weight: 800; /* Mais negrito */
+    font-weight: 800; 
 }
 
 h2::after {
     content: '';
     display: block;
-    width: 80px; /* Linha de destaque mais longa */
-    height: 5px; /* Linha de destaque mais grossa */
-    background-color: var(--accent-color); /* Linha com cor de destaque */
+    width: 80px; 
+    height: 5px; 
+    background-color: var(--accent-color); /* Linha de destaque chamativa */
     margin: 0.5rem auto 0;
     border-radius: 3px;
 }
 
+/* Estilos de grids (mantidos, mas não usados diretamente se forem carrosséis) */
 .services-grid, .advantages-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo, mínimo 280px, preenche o espaço */
-    gap: 2rem; /* Mais espaçamento entre os cards */
-    margin-top: 3rem; /* Espaçamento abaixo do título/parágrafo */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 3rem; 
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .service-item, .advantage-item {
-    background-color: var(--white);
+    background-color: var(--bg-medium); /* Fundo dos cards ligeiramente mais claro que o fundo da seção */
     border: 1px solid var(--border-light);
     border-radius: var(--border-radius-lg);
-    padding: 2.5rem; /* Mais padding interno */
-    box-shadow: 0 8px 20px var(--shadow-light);
-    text-align: center; /* Centraliza o conteúdo dos cards */
+    padding: 2.5rem; 
+    box-shadow: 0 8px 20px var(--shadow-medium); /* Sombra mais destacada */
+    text-align: center; 
     transition: all var(--transition-speed);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os itens verticalmente */
+    align-items: center; 
 }
 
 .service-item:hover, .advantage-item:hover {
-    transform: translateY(-10px); /* Animação mais pronunciada */
-    box-shadow: 0 15px 30px var(--shadow-medium);
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px var(--shadow-strong);
 }
 
 .service-icon, .advantage-icon {
-    width: 70px; /* Ícones maiores */
-    height: 70px;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color); /* Cor primária para os ícones */
-    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.1)); /* Sombra sutil no ícone */
+    width: 150px; 
+    height: 150px; 
+    margin-bottom: 1.5rem; 
+    object-fit: cover; 
+    border-radius: var(--border-radius-md); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra más escura para destacar a imagem no card */
 }
 
 .service-item h3, .advantage-item h3 {
-    color: var(--secondary-color); /* Títulos dos cards com secondary-color */
+    color: var(--text-on-dark); /* Títulos dos cards em branco/claro */
     font-size: 1.5em;
     margin-top: 0;
     margin-bottom: 0.8rem;
     position: relative;
     padding-bottom: 0.5rem;
     transition: color var(--transition-speed);
-    text-align: center; /* Centraliza títulos dos cards */
+    text-align: center; 
 }
 
 .service-item h3::after, .advantage-item h3::after {
@@ -408,69 +405,367 @@ h2::after {
     display: block;
     width: 50px;
     height: 3px;
-    background-color: var(--accent-color); /* Linha de destaque com accent-color */
-    margin: 0.5rem auto 0; /* Centraliza a linha */
+    background-color: var(--accent-color); /* Linha de destaque chamativa */
+    margin: 0.5rem auto 0; 
     border-radius: 2px;
 }
 
 .service-item p, .advantage-item p {
     font-size: 1.05em;
-    color: var(--text-light);
+    color: var(--text-light); /* Texto dos cards em cinza claro */
     line-height: 1.6;
-    text-align: center; /* Centraliza o texto dos cards */
+    text-align: center; 
+}
+
+/* --- Estilos do Carrossel de SERVIÇOS --- */
+.services-section .swiper {
+    width: 100%; 
+    max-width: 1100px; 
+    margin: 0 auto;
+    overflow: hidden; 
+    padding-bottom: 40px; 
+    position: relative; 
+}
+
+.services-section .swiper-wrapper {
+    align-items: stretch; 
+}
+
+.services-section .swiper-slide {
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+}
+
+.services-section .swiper-slide .service-item {
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.services-section .swiper-button-prev,
+.services-section .swiper-button-next {
+    color: var(--accent-color); /* Setas chamativas */
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+}
+
+.services-section .swiper-button-prev:after,
+.services-section .swiper-button-next:after {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.services-section .swiper-pagination {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.services-section .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--text-light); /* Bolinhas em cinza claro */
+    opacity: 0.8;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.services-section .swiper-pagination-bullet-active {
+    background: var(--accent-color); /* Bolinha ativa chamativa */
+    opacity: 1;
+}
+
+/* --- Seção de Galeria de Serviços Realizados (Carrossel) --- */
+.galeria-section {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--bg-medium); /* Fundo da galeria com tom médio */
+}
+
+.galeria-section h2 {
+    font-size: clamp(2.2em, 4.5vw, 3.5em);
+    color: var(--text-on-dark); /* Títulos da galeria em branco/claro */
+    margin-bottom: 1rem;
+}
+.galeria-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: var(--accent-color); /* Linha de destaque chamativa */
+    margin: 0.5rem auto 0;
+    border-radius: 3px;
+}
+
+.galeria-section p {
+    font-size: 1.1em;
+    color: var(--text-light); /* Texto da galeria em cinza claro */
+    margin-bottom: 3rem;
+}
+
+/* Estilos do Swiper (Container do Carrossel da Galeria) */
+.galeria-section .swiper { 
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; 
+    padding-bottom: 30px; 
+    position: relative; 
+}
+
+.galeria-section .swiper-wrapper {
+    display: flex; 
+    align-items: stretch; 
+}
+
+/* Estilos de cada item/slide da Galeria */
+.galeria-section .galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    background-color: var(--bg-dark); /* Fundo do item da galeria (se a imagem não cobrir tudo) */
+    box-shadow: 0 8px 20px var(--shadow-medium); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 350px; 
+    height: 250px; 
+    flex-shrink: 0; 
+}
+
+.galeria-section .galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px var(--shadow-strong);
+}
+
+.galeria-section .galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.galeria-section .galeria-item:hover img {
+    transform: scale(1.05); 
+}
+
+.galeria-section .galeria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); 
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: left;
+    transform: translateY(100%); 
+    transition: transform 0.3s ease;
+    opacity: 0; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%; 
+}
+
+.galeria-section .galeria-item:hover .galeria-overlay {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+.galeria-section .galeria-overlay h4 {
+    color: var(--white);
+    font-size: 1.3em;
+    margin-bottom: 0.5rem;
+}
+
+.galeria-section .galeria-overlay p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Estilos dos controles do Swiper (Setas e Paginação) da Galeria */
+.galeria-section .swiper-button-prev,
+.galeria-section .swiper-button-next {
+    color: var(--primary-color); /* Setas em cor primária */
+    opacity: 0.7;
+    transition: opacity var(--transition-speed);
+}
+
+.galeria-section .swiper-button-prev:after,
+.galeria-section .swiper-button-next:after {
+    font-size: 2.5em; 
+    font-weight: bold;
+}
+
+.galeria-section .swiper-button-prev:hover,
+.galeria-section .swiper-button-next:hover {
+    opacity: 1;
+}
+
+.galeria-section .swiper-pagination {
+    position: absolute !important; 
+    bottom: 0px !important; 
+    left: 0;
+    width: 100%;
+    margin-top: 1rem; 
+}
+
+.galeria-section .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--text-light); /* Bolinhas em cinza claro */
+    opacity: 0.8;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.galeria-section .swiper-pagination-bullet-active {
+    background: var(--accent-color); /* Bolinha ativa chamativa */
+    opacity: 1;
+}
+
+
+/* --- Estilos do Carrossel de VANTAGENS --- */
+.advantages-section .swiper {
+    width: 100%; 
+    max-width: 1100px; 
+    margin: 0 auto;
+    overflow: hidden; 
+    padding-bottom: 40px; 
+    position: relative; 
+}
+
+.advantages-section .swiper-wrapper {
+    align-items: stretch; 
+}
+
+.advantages-section .swiper-slide {
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+}
+
+.advantages-section .swiper-slide .advantage-item {
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.advantages-section .swiper-button-prev,
+.advantages-section .swiper-button-next {
+    color: var(--accent-color); /* Setas chamativas */
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.advantages-section .swiper-button-prev:after,
+.advantages-section .swiper-button-next:after {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.advantages-section .swiper-button-prev:hover,
+.advantages-section .swiper-button-next:hover {
+    opacity: 1;
+}
+
+.advantages-section .swiper-pagination {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.advantages-section .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--text-light); /* Bolinhas em cinza claro */
+    opacity: 0.8;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.advantages-section .swiper-pagination-bullet-active {
+    background: var(--accent-color); /* Bolinha ativa chamativa */
+    opacity: 1;
 }
 
 /* --- Seção de Depoimentos (Testimonials) --- */
 .testimonials-section {
-    background-color: var(--bg-medium); /* Fundo contrastante */
+    background-color: var(--bg-medium); 
     padding: 5rem 0;
 }
 
 .testimonials-section h2 {
-    color: var(--primary-color);
+    color: var(--text-on-dark); /* Título em branco/claro */
 }
 
 .mySwiperTestimonials {
-    padding-bottom: 3rem; /* Espaço para a paginação */
+    padding-bottom: 3rem; 
     padding-top: 1rem;
 }
 
 .testimonial-card {
-    background-color: var(--white);
+    background-color: var(--bg-dark); /* Fundo do card de depoimento mais escuro */
     border-radius: var(--border-radius-lg);
     padding: 2rem;
-    box-shadow: 0 8px 20px var(--shadow-light);
+    box-shadow: 0 8px 20px var(--shadow-medium); /* Sombra mais destacada */
     text-align: center;
-    height: auto; /* Altura flexível */
+    height: auto; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurra o nome para baixo */
+    justify-content: space-between; 
 }
 
 .testimonial-card p {
     font-size: 1.05em;
     font-style: italic;
-    color: var(--text-dark);
+    color: var(--text-light); /* Texto do depoimento em cinza claro */
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    flex-grow: 1; /* Ocupa o máximo de espaço */
+    flex-grow: 1; 
 }
 
 .testimonial-card h4 {
-    color: var(--secondary-color);
+    color: var(--text-on-dark); /* Nome do cliente em branco/claro */
     font-size: 1.1em;
     margin-bottom: 0.3rem;
 }
 
 .testimonial-card span {
     font-size: 0.9em;
-    color: var(--text-light);
+    color: var(--text-light); /* Localização em cinza claro */
 }
 
 /* Estilos do Swiper para Depoimentos (Mantidos e ajustados para a nova paleta) */
 .mySwiperTestimonials .swiper-button-next,
 .mySwiperTestimonials .swiper-button-prev {
-    color: var(--primary-color) !important;
+    color: var(--primary-color) !important; /* Setas em cor primária */
     font-size: 2.5rem !important;
     opacity: 0.7;
 }
@@ -481,30 +776,30 @@ h2::after {
 }
 
 .mySwiperTestimonials .swiper-pagination-bullet {
-    background-color: var(--text-light) !important;
+    background-color: var(--text-light) !important; /* Bolinhas em cinza claro */
     opacity: 0.6;
     width: 10px;
     height: 10px;
 }
 
 .mySwiperTestimonials .swiper-pagination-bullet-active {
-    background-color: var(--primary-color) !important;
+    background-color: var(--primary-color) !important; /* Bolinha ativa em cor primária */
     opacity: 1;
 }
 
 /* --- Seção de Contato --- */
 .contact-section {
-    background-color: var(--primary-color); /* Fundo com a cor primária */
+    background-color: var(--bg-dark); /* Fundo de contato bem escuro */
     color: var(--text-on-dark);
     padding: 5rem 0;
 }
 
 .contact-section h2 {
-    color: var(--white); /* Título branco */
+    color: var(--white); 
     margin-bottom: 1rem;
 }
 .contact-section h2::after {
-    background-color: var(--accent-color); /* Linha de destaque com accent-color */
+    background-color: var(--accent-color); 
 }
 
 .contact-intro {
@@ -517,13 +812,13 @@ h2::after {
     margin-right: auto;
 }
 
-.contact-whatsapp-btn { /* Botão de WhatsApp na seção de contato */
+.contact-whatsapp-btn { 
     background-color: var(--whatsapp-green);
     color: var(--white);
     padding: 1rem 2.5rem;
     font-size: 1.2em;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-    margin-bottom: 3rem; /* Mais espaço para as infos de contato */
+    margin-bottom: 3rem; 
 }
 
 .contact-whatsapp-btn:hover {
@@ -533,9 +828,9 @@ h2::after {
 }
 
 .contact-whatsapp-btn .icon {
-    width: 1.5em; /* Ícone maior */
+    width: 1.5em; 
     height: 1.5em;
-    filter: invert(100%); /* Garante que o ícone interno seja branco */
+    filter: invert(100%); 
 }
 
 
@@ -546,16 +841,16 @@ h2::after {
     line-height: 1.5;
 }
 .contact-info strong {
-    color: var(--accent-color); /* Destaque para números/informações importantes */
+    color: var(--accent-color); 
     font-weight: 700;
 }
 
 /* --- Rodapé (Footer) --- */
 footer {
-    background-color: var(--secondary-color); /* Cor mais escura no rodapé */
+    background-color: var(--bg-dark); 
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    padding: 1.8rem 0; /* Mais padding no rodapé */
+    padding: 1.8rem 0; 
     font-size: 0.9em;
 }
 
@@ -578,40 +873,42 @@ footer .container p {
 }
 
 .social-links a {
-    color: var(--accent-color);
+    color: var(--accent-color); 
     font-weight: 600;
 }
 .social-links a:hover {
-    color: var(--white); /* Troca para branco no hover */
+    color: var(--white); 
 }
 
 /* --- ESTILOS PARA O BOTÃO FLUTUANTE (FIXO) --- */
-#floating-whatsapp-btn { /* Renomeado para mais clareza */
+#floating-whatsapp-btn { 
     position: fixed;
-    bottom: 1.8rem; /* Mais afastado da borda */
+    bottom: 1.8rem; 
     right: 1.8rem;
     z-index: 1000;
-    background-color: var(--whatsapp-green); /* Cor de fundo fixa */
-    border-radius: 50%; /* Completamente redondo */
-    padding: 0.9rem; /* Padding interno */
+    background-color: var(--whatsapp-green); 
+    color: var(--white); /* Cor do ícone */
+    border-radius: 50%; 
+    padding: 0.9rem; 
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Sombra mais pronunciada */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3); 
     transition: all var(--transition-speed);
+    /* Removido filter: invert(100%) para garantir visibilidade do zzp.png */
 }
 
 #floating-whatsapp-btn:hover {
     background-color: #1DA851; 
-    transform: translateY(-5px) scale(1.1); /* Animação mais dinâmica */
+    transform: translateY(-5px) scale(1.1); 
     box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
 }
 
-.whatsapp-icon-float { /* Estilo para o ícone interno do botão flutuante */
-    width: 2.5rem; /* Ícone maior */
+.whatsapp-icon-float { 
+    width: 2.5rem; 
     height: 2.5rem; 
-    filter: invert(100%); /* Garante que o ícone seja branco */
-    margin-right: 0; /* Remove margem extra */
+    /* Removido filter: invert(100%) para evitar inversão de cores e garantir visibilidade */
+    margin-right: 0; 
 }
 
 /* ========================================= */
@@ -621,11 +918,11 @@ footer .container p {
 /* Desktop e Telas Maiores (acima de 993px) */
 @media (min-width: 993px) {
     .header-main-content {
-        flex-direction: row; /* Volta para linha no desktop */
-        justify-content: space-between; /* Espaça os itens */
+        flex-direction: row; 
+        justify-content: space-between; 
         align-items: center; 
-        text-align: left; /* Alinha o texto do header-text-content à esquerda */
-        padding: 0 2rem; /* Adiciona padding lateral para respiro */
+        text-align: left; 
+        padding: 0 2rem; 
     }
     
     .header-logo {
@@ -633,16 +930,16 @@ footer .container p {
     }
 
     .logo-img {
-        width: 250px; /* Tamanho maior do logo no desktop */
+        width: 250px; 
         margin-bottom: 0;
     }
 
     .header-text-content {
-        flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
-        align-items: flex-start; /* Alinha o texto à esquerda */
-        text-align: left; /* Alinha o texto à esquerda */
-        margin-left: 2rem; /* Espaço entre logo e texto */
-        margin-right: 2rem; /* Espaço entre texto e navegação */
+        flex-grow: 1; 
+        align-items: flex-start; 
+        text-align: left; 
+        margin-left: 2rem; 
+        margin-right: 2rem; 
     }
 
     header h1 {
@@ -652,35 +949,35 @@ footer .container p {
     
     .site-slogan { 
         font-size: 1.05em; 
-        margin: 0; /* Remove margens extras */
+        margin: 0; 
         padding: 0;
-        max-width: unset; /* Permite que o texto use a largura total disponível */
+        max-width: unset; 
     }
 
     nav { 
-        width: auto; /* Largura automática */
-        margin-top: 0; /* Remove margem superior */
-        margin-bottom: 0; /* Remove margem inferior */
+        width: auto; 
+        margin-top: 0; 
+        margin-bottom: 0; 
     }
     
     nav ul {
-        flex-direction: row; /* Itens do menu em linha */
-        gap: 2rem; /* Mais espaçamento entre os itens */
+        flex-direction: row; 
+        gap: 1.5rem; 
     }
 
     nav ul li a {
-        font-size: 1em; 
-        padding: 10px 0; /* Menos padding vertical para desktop */
+        font-size: 0.95em; 
+        padding: 0.6rem 1.2rem; 
     }
 
     .btn-header-whatsapp {
-        margin-left: 2rem; /* Espaçamento para o botão de WhatsApp no cabeçalho */
+        margin-left: 2rem; 
         font-size: 1em;
         padding: 0.8rem 1.6rem;
     }
 
     .hero-section {
-        padding: 8rem 1.5rem; /* Mais padding em telas maiores */
+        padding: 8rem 1.5rem; 
         min-height: 700px;
     }
 
@@ -689,25 +986,25 @@ footer .container p {
         gap: 20px;
     }
     .hero-whatsapp-btn {
-        width: auto; /* Retorna a largura automática para botões lado a lado */
-        font-size: 1.1em; /* Ajuste para o tamanho maior no desktop */
+        width: auto; 
+        font-size: 1.1em; 
         padding: 1rem 2.5rem;
     }
     
     /* Seções (Serviços, Vantagens, etc.) */
     .services-section, .advantages-section, .testimonials-section, .contact-section {
-        padding: 6rem 0; /* Mais padding nas seções para desktop */
+        padding: 6rem 0; 
     }
     h2 {
-        font-size: clamp(2.5em, 4vw, 4em); /* Títulos maiores no desktop */
+        font-size: clamp(2.5em, 4vw, 4em); 
     }
     h2::after {
-        width: 100px; /* Linha de destaque maior no desktop */
-        height: 6px; /* Linha mais grossa */
+        width: 100px; 
+        height: 6px; 
     }
 
     .service-item, .advantage-item {
-        padding: 3rem; /* Mais padding interno para cards */
+        padding: 3rem; 
     }
 
     .testimonial-card p {
@@ -726,9 +1023,9 @@ footer .container p {
     }
 
     footer .container {
-        flex-direction: row; /* Rodapé em linha */
+        flex-direction: row; 
         justify-content: space-between;
-        padding: 0 2rem; /* Padding lateral */
+        padding: 0 2rem; 
     }
     .social-links {
         margin-top: 0;
@@ -737,11 +1034,38 @@ footer .container p {
     #floating-whatsapp-btn {
         bottom: 2rem;
         right: 2rem;
-        padding: 1.2rem; /* Botão flutuante maior */
+        padding: 1.2rem; 
     }
     .whatsapp-icon-float {
-        width: 3rem; /* Ícone maior no desktop */
+        width: 3rem; 
         height: 3rem;
+    }
+
+    /* Galeria Desktop */
+    .galeria-section .swiper {
+        width: 90%; 
+    }
+    .galeria-section .galeria-item {
+        width: 300px; 
+        height: 220px; 
+    }
+
+    /* Carrossel de Serviços Desktop */
+    .services-section .swiper {
+        width: 90%; 
+    }
+    .services-section .swiper-slide .service-item {
+        width: 300px; 
+        height: auto; 
+    }
+
+    /* Carrossel de Vantagens Desktop */
+    .advantages-section .swiper {
+        width: 90%; 
+    }
+    .advantages-section .swiper-slide .advantage-item {
+        width: 300px; 
+        height: auto; 
     }
 }
 
@@ -757,11 +1081,11 @@ footer .container p {
         font-size: 0.9em;
     }
     nav ul {
-        gap: 1rem;
+        gap: 0.8rem; 
     }
     nav ul li a {
-        font-size: 0.8em;
-        padding: 6px 10px;
+        font-size: 0.85em; 
+        padding: 0.4rem 0.8rem; 
     }
     .btn-header-whatsapp {
         font-size: 0.8em;
@@ -785,7 +1109,7 @@ footer .container p {
         font-size: 1.1em;
     }
 
-    /* Ajuste para grids em tablet */
+    /* Ajuste para grids em tablet (NÃO APLICA MAIS SE FOREM CARROSSÉIS) */
     .services-grid, .advantages-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
@@ -794,14 +1118,40 @@ footer .container p {
         padding: 2rem;
     }
     .service-icon, .advantage-icon {
-        width: 60px;
-        height: 60px;
+        width: 120px; 
+        height: 120px; 
+        margin-bottom: 1.5rem; 
     }
     .service-item h3, .advantage-item h3 {
         font-size: 1.4em;
     }
     .service-item p, .advantage-item p {
         font-size: 0.95em;
+    }
+
+    /* Galeria Tablet */
+    .galeria-section .swiper {
+        width: 95%; 
+    }
+    .galeria-section .galeria-item {
+        width: 280px; 
+        height: 200px; 
+    }
+
+    /* Carrossel de Serviços Tablet */
+    .services-section .swiper {
+        width: 95%; 
+    }
+    .services-section .swiper-slide .service-item {
+        width: 280px; 
+    }
+
+    /* Carrossel de Vantagens Tablet */
+    .advantages-section .swiper {
+        width: 95%; 
+    }
+    .advantages-section .swiper-slide .advantage-item {
+        width: 280px; 
     }
 
     /* Swiper Depoimentos */
@@ -832,15 +1182,16 @@ footer .container p {
         margin-bottom: 10px;
     }
     nav ul {
-        flex-direction: column; /* Itens do menu em coluna para mobile */
+        flex-direction: column; 
         gap: 0.5rem;
     }
     nav ul li {
-        width: 100%; /* Ocupa 100% da largura */
+        width: 100%; 
     }
+    /* Estilo de botão para nav links em mobile */
     nav ul li a {
         font-size: 0.9em;
-        padding: 8px 10px;
+        padding: 0.6rem 1rem;
     }
     .btn-header-whatsapp {
         font-size: 0.8em;
@@ -863,7 +1214,7 @@ footer .container p {
         gap: 10px;
     }
     .hero-whatsapp-btn {
-        width: 90%; /* Ocupa mais espaço em mobile */
+        width: 90%; 
         font-size: 1em;
         padding: 0.8rem 1.5rem;
     }
@@ -881,17 +1232,18 @@ footer .container p {
         height: 4px;
     }
 
+    /* Ajuste para grids em mobile (NÃO APLICA MAIS SE FOREM CARROSSÉIS) */
     .services-grid, .advantages-grid {
-        grid-template-columns: 1fr; /* Uma coluna em mobile */
+        grid-template-columns: 1fr; 
         gap: 1.2rem;
     }
     .service-item, .advantage-item {
         padding: 1.5rem;
     }
     .service-icon, .advantage-icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 1rem;
+        width: 100px; 
+        height: 100px; 
+        margin-bottom: 1.5rem; 
     }
     .service-item h3, .advantage-item h3 {
         font-size: 1.2em;
@@ -900,6 +1252,56 @@ footer .container p {
     .service-item p, .advantage-item p {
         font-size: 0.9em;
     }
+
+    /* Galeria Mobile */
+    .galeria-section .swiper {
+        width: 100%; 
+    }
+    .galeria-section .galeria-item {
+        width: 250px; 
+        height: 180px; 
+    }
+
+    /* Carrossel de Serviços Mobile */
+    .services-section .swiper {
+        width: 100%;
+    }
+    .services-section .swiper-slide .service-item {
+        width: 280px; 
+    }
+    .services-section .swiper-button-prev,
+    .services-section .swiper-button-next {
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5em; 
+    }
+    .services-section .swiper-button-prev {
+        left: 0; 
+    }
+    .services-section .swiper-button-next {
+        right: 0; 
+    }
+
+    /* Carrossel de Vantagens Mobile */
+    .advantages-section .swiper {
+        width: 100%;
+    }
+    .advantages-section .swiper-slide .advantage-item {
+        width: 280px; 
+    }
+    .advantages-section .swiper-button-prev,
+    .advantages-section .swiper-button-next {
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5em; 
+    }
+    .advantages-section .swiper-button-prev {
+        left: 0;
+    }
+    .advantages-section .swiper-button-next {
+        right: 0;
+    }
+
 
     .testimonial-card {
         padding: 1.5rem;
@@ -919,7 +1321,7 @@ footer .container p {
     .mySwiperTestimonials .swiper-button-next,
     .mySwiperTestimonials .swiper-button-prev {
         font-size: 1.5rem !important;
-        top: calc(50% + 20px); /* Ajusta a posição das setas para não sobrepor o texto */
+        top: calc(50% + 20px); 
     }
     .mySwiperTestimonials .swiper-pagination-bullet {
         width: 8px;
