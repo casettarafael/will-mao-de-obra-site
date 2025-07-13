@@ -7,7 +7,7 @@
 
     --text-dark: #0f0f0f; /* Praticamente preto, para títulos em elementos mais claros, se houver */
     --text-light: #cccccc; /* Cinza claro para o corpo do texto (legível em fundos escuros) */
-    --text-on-dark: #ffffff; /* Branco puro para texto em fundos muito escuros */
+    --text-on-dark: #bfbfbf; /* Branco puro para texto em fundos muito escuros */
 
     --bg-light: #1c2530; /* Novo fundo "claro" - um cinza muito escuro */
     --bg-medium: #25303f; /* Novo fundo "médio" - um cinza um pouco mais claro que o bg-light */
